@@ -1,9 +1,9 @@
 package org.commonmodels.entity;
 
-import com.graphql.request.CreateStudentRequest;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.commonmodels.request.CreateStudentRequest;
 
 import javax.persistence.*;
 import java.util.List;

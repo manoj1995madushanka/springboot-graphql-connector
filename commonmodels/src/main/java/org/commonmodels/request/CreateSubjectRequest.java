@@ -1,4 +1,4 @@
-package com.graphql.request;
+package org.commonmodels.request;
 
 import lombok.Getter;
 import lombok.Setter;

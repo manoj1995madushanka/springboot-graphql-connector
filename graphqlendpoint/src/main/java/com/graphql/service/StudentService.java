@@ -7,8 +7,8 @@ import org.commonmodels.entity.Subject;
 import com.graphql.repository.AddressRepository;
 import com.graphql.repository.StudentRepository;
 import com.graphql.repository.SubjectRepository;
-import com.graphql.request.CreateStudentRequest;
-import com.graphql.request.CreateSubjectRequest;
+import org.commonmodels.request.CreateStudentRequest;
+import org.commonmodels.request.CreateSubjectRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
