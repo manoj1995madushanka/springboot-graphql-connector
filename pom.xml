@@ -24,7 +24,39 @@
         <spring-boot.version>2.3.4.RELEASE</spring-boot.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <lombok.version>1.18.16</lombok.version>
+        <graphiql-spring-boot-starter.version>${graphql-spring-boot-starter.version}</graphiql-spring-boot-starter.version>
+        <graphql-spring-boot-starter.version>5.0.2</graphql-spring-boot-starter.version>
+        <graphql-java-tools.version>5.2.4</graphql-java-tools.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+
+        <!--graphQL dependency-->
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphql-spring-boot-starter</artifactId>
+            <version>${graphql-spring-boot-starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphql-java-tools</artifactId>
+            <version>${graphql-java-tools.version}</version>
+        </dependency>
+        <!--this dependency is optional one
+        used to generate UI for graphql schema-->
+        <!--follow below link to open graphql UI-->
+        <!--http://localhost:8080/graphiql-->
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphiql-spring-boot-starter</artifactId>
+            <version>${graphiql-spring-boot-starter.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

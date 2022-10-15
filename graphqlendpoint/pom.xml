@@ -20,7 +20,23 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
-            <version>${spring-boot.version}</version>
+        </dependency>
+        <!--graphQL dependency-->
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphql-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphql-java-tools</artifactId>
+        </dependency>
+        <!--this dependency is optional one
+        used to generate UI for graphql schema-->
+        <!--follow below link to open graphql UI-->
+        <!--http://localhost:8080/graphiql-->
+        <dependency>
+            <groupId>com.graphql-java</groupId>
+            <artifactId>graphiql-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 
