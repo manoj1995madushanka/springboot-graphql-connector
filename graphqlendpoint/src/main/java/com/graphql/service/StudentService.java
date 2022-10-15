@@ -1,9 +1,9 @@
 package com.graphql.service;
 
 
-import com.graphql.entity.Address;
-import com.graphql.entity.Student;
-import com.graphql.entity.Subject;
+import org.commonmodels.entity.Address;
+import org.commonmodels.entity.Student;
+import org.commonmodels.entity.Subject;
 import com.graphql.repository.AddressRepository;
 import com.graphql.repository.StudentRepository;
 import com.graphql.repository.SubjectRepository;

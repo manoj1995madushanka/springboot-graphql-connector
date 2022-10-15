@@ -1,6 +1,6 @@
 package com.graphql.repository;
 
-import com.graphql.entity.Subject;
+import org.commonmodels.entity.Subject;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

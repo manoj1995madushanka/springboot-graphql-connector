@@ -1,8 +1,8 @@
-package com.graphql.response;
+package org.commonmodels.response;
 
-import com.graphql.entity.Subject;
 import lombok.Getter;
 import lombok.Setter;
+import org.commonmodels.entity.Subject;
 
 @Getter
 @Setter

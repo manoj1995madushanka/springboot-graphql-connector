@@ -2,10 +2,10 @@ package com.graphql.resolver;
 
 import com.coxautodev.graphql.tools.GraphQLResolver;
 
-import com.graphql.entity.Subject;
+import org.commonmodels.entity.Subject;
 import com.graphql.enums.SubjectNameFilter;
-import com.graphql.response.StudentResponse;
-import com.graphql.response.SubjectResponse;
+import org.commonmodels.response.StudentResponse;
+import org.commonmodels.response.SubjectResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

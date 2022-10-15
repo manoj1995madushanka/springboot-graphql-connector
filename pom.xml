@@ -18,6 +18,7 @@
     <modules>
         <module>graphqlendpoint</module>
         <module>restendpoint</module>
+        <module>commonmodels</module>
     </modules>
 
     <properties>

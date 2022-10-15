@@ -1,8 +1,8 @@
 package com.graphql.query;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.graphql.entity.Student;
-import com.graphql.response.StudentResponse;
+import org.commonmodels.entity.Student;
+import org.commonmodels.response.StudentResponse;
 import com.graphql.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

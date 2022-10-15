@@ -2,7 +2,7 @@ package com.graphql.mutation;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.graphql.request.CreateStudentRequest;
-import com.graphql.response.StudentResponse;
+import org.commonmodels.response.StudentResponse;
 import com.graphql.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

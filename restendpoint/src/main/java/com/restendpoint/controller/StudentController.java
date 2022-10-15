@@ -1,20 +1,13 @@
-package com.graphql.controller;
+package com.restendpoint.controller;
 
-import javax.validation.Valid;
-
-import org.commonmodels.entity.Student;
+import com.graphql.entity.Student;
 import com.graphql.request.CreateStudentRequest;
-import org.commonmodels.response.StudentResponse;
+import com.graphql.response.StudentResponse;
 import com.graphql.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 

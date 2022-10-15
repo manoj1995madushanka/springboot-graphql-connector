@@ -1,4 +1,4 @@
-package com.graphql.entity;
+package org.commonmodels.entity;
 
 import lombok.Getter;
 import lombok.Setter;
