@@ -1,11 +1,11 @@
 package org.commonmodels.response;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.commonmodels.entity.Subject;
 
-@Getter
-@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class SubjectResponse {
 
 	private Long id;

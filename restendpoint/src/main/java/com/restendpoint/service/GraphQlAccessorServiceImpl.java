@@ -2,6 +2,7 @@ package com.restendpoint.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.restendpoint.util.JacksonDeserializer;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -16,6 +17,8 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Service
@@ -54,7 +57,15 @@ public class GraphQlAccessorServiceImpl implements GraphQlAccessorService{
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return objectMapper.readValue(actualResponse, StudentResponse.class);
+
+        List<StudentResponse> studentList = new ArrayList<>();
+
+        try {
+            studentList.addAll(JacksonDeserializer.jsonArrayToList(actualResponse,StudentResponse.class));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return studentList.get(0);
     }
 
     HttpResponse callGraphQLService()
@@ -62,9 +73,21 @@ public class GraphQlAccessorServiceImpl implements GraphQlAccessorService{
         HttpClient client = HttpClientBuilder.create().build();
         HttpGet request = new HttpGet(url);
         URI uri = new URIBuilder(request.getURI())
-                .addParameter("query", query)
+                .addParameter("query", getQuery())
                 .build();
         request.setURI(uri);
         return client.execute(request);
+    }
+
+    String getQuery(){
+        StringBuilder sb = new StringBuilder("{")
+                .append("student(id:2){")
+                .append("firstName,")
+                .append("learningSubjects(subjectNameFilter:MongoDB){")
+                .append("subjectName")
+                .append("}")
+                .append("}")
+                .append("}");
+        return sb.toString();
     }
 }

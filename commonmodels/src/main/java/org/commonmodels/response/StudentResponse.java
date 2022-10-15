@@ -1,14 +1,16 @@
 package org.commonmodels.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.commonmodels.entity.Student;
 
 import java.util.List;
 
-@Setter
-@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class StudentResponse {
 
     private long id;
